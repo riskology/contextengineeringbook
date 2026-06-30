@@ -15,20 +15,18 @@ os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY", "YOUR_API_KEY")
 
 # LangChain의 ChatOpenAI 클래스를 LLM(두뇌)으로 초기화합니다.
 llm = ChatOpenAI(
-    model=”gpt-5.1”,
+    model="gpt-5.1",
     reasoning={ "effort": "low" }
 )
 # CLAUDE: 클라이언트 초기화 방식이 다릅니다. (LangChain 표준)
-# CLAUDE: os.environ[“ANTHROPIC_API_KEY”] = os.getenv(“ANTHROPIC_API_KEY”, “YOUR_
-CLAUDE_KEY”)
-# CLAUDE: llm = ChatAnthropic(model=”claude-sonnet-4-5-20250929”, temperature=0.1)
+# CLAUDE: os.environ["ANTHROPIC_API_KEY"] = os.getenv("ANTHROPIC_API_KEY", "YOUR_CLAUDE_KEY")
+# CLAUDE: llm = ChatAnthropic(model="claude-sonnet-4-5-20250929", temperature=0.1)
 
 # GEMINI: 클라이언트가 아닌 라이브러리 자체를 설정합니다. (LangChain 표준)
 # GEMINI: import google.generativeai as genai
-# GEMINI: os.environ[“GOOGLE_API_KEY”] = os.getenv(“GOOGLE_API_KEY”, “YOUR_GEMINI_
-KEY”)
-# GEMINI: genai.configure(api_key=os.environ[“GOOGLE_API_KEY”])
-# GEMINI: llm = ChatGoogleGenerativeAI(model=”gemini-3.0”, temperature=0.1)
+# GEMINI: os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY", "YOUR_GEMINI_KEY")
+# GEMINI: genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
+# GEMINI: llm = ChatGoogleGenerativeAI(model="gemini-3.0", temperature=0.1)
 
 
 # --- 1. 외부 지식 검색(Retrieval) 시뮬레이션 ---
